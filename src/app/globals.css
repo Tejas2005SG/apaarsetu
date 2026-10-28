@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-brand-50: #f1f4f9;
+  --color-brand-100: #dde4f0;
+  --color-brand-200: #b9c7df;
+  --color-brand-500: #3b5a8f;
+  --color-brand-600: #2a4675;
+  --color-brand-700: #1f3864;
+  --color-brand-800: #182b4d;
+  --color-brand-900: #111f38;
+
+  --color-ink: #1d2433;
+  --color-muted: #5b6475;
+  --color-line: #e2e6ec;
+  --color-canvas: #f6f7f9;
+}
+
+html,
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+.table-base {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-base th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-muted);
+  background: #f9fafb;
+  border-bottom: 1px solid var(--color-line);
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+.table-base td {
+  border-bottom: 1px solid var(--color-line);
+  padding: 9px 12px;
+  vertical-align: middle;
+}
+.table-base tbody tr:hover td {
+  background: #fafbfc;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-in {
+  animation: fade-in 0.18s ease-out;
+}
